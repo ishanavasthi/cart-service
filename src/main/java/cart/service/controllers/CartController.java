@@ -1,6 +1,13 @@
 package cart.service.controllers;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+import cart.service.dtos.CartDto;
+import cart.service.services.CartService;
+import cart.service.dtos.services.*;
+
 import java.time.LocalDate;
 
 
@@ -24,7 +31,7 @@ public class CartController {
     }
 
     @PostMapping("/carts")
-    public CreateOrUpdateProductsResponse postAddANewProduct(@RequestBody CreateOrUpdateProductsRequestBody body) {
+    public crops postAddANewProduct(@RequestBody CreateOrUpdateProductsRequestBody body) {
         return cartService.addNewProducts(body.userId, body.date, body.products);
     }
 
