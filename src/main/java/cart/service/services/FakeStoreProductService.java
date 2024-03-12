@@ -18,6 +18,7 @@ public class FakeStoreProductService implements ProductService {
         return null;
     }
 
+    @SuppressWarnings("null")
     @Override
     public Product getSingleProduct(Long id) {
 
